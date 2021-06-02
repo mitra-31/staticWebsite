@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+C
+{% endblock title %}
+
+
+
+{% block content %}
+<style>
+  .container {
+    scroll-behavior: smooth;
+  }
+
+  code {
+    color: blue;
+    font-weight: 600;
+
+  }
+
+  .codes {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    margin: 15px;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+  }
+</style>
+<!-- Demo content -->
+<div class="row ">
+  <div class="col-lg-12">
+    <h3 class="display-4">Learn C++</h3>
+    <hr>
+  </div>
+
+  <a name="top"></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+
+        <ul class="list-group mb-2">
+          <a href="#getstarted">
+            <li class="list-group-item">Get Started</li>
+          </a>
+          <a href="#syntax">
+          <li class="list-group-item">Syntax</li>
+        </a>
+        <a href="#comment">
+          <li class="list-group-item">Comments</li>
+        </a>
+        <a href="#var">
+          <li class="list-group-item">Variables</li>
+        </a>
+        <a href="#userinput">
+          <li class="list-group-item">User Inputs</li>
+        </a>
+        <a href="#datatype">
+          <li class="list-group-item">Data types</li>
+        </a>
+        <a href="#operators">
+          <li class="list-group-item">Operators</li>
+        </a>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+
+        <ul class="list-group mb-5">
+          <li class="list-group-item">Strings</li>
+          <li class="list-group-item">Contorl Flows</li>
+          <li class="list-group-item">Arrays</li>
+          <li class="list-group-item">Pointers</li>
+          <li class="list-group-item">Refrences</li>
+          <li class="list-group-item">Functions</li>
+          <li class="list-group-item">Classes</li>
+        </ul>
+      </div>
+    </div>
+    <div class="seprator"></div>
+    <div class="row">
+      <div class="col-sm-12">
+        <a name="getstarted"></a>
+        <h4 class="display-3 mb-2">Get Started</h4>
+        <hr class="hr1">
+        <!-- Installing -->
+        <h5 class="display-5 mb-3 mt-3">C++ Install IDE</h5>
+        <div class="text-wrap">
+          <p class="user-select-auto " style="font-size: 1.2rem;"> An IDE (Integrated Development Environment) is
+            used to edit AND compile the code.
+
+            Popular IDE's include Code::Blocks, Eclipse, and Visual Studio. These are all free, and they can be used to
+            both edit and debug C++ code.
+
+            Note: Web-based IDE's can work as well, but functionality is limited.
+
+            We will use Code::Blocks in our tutorial, which we believe is a good place to start.
+
+            You can find the latest version of Codeblocks at <a href="http://www.codeblocks.org/downloads/26"
+              class="pe-none" tabindex="-1" aria-disabled="true">http://www.codeblocks.org/downloads/26</a>. Download
+            the <code>mingw-setup.exe</code>
+            file, which will install the text editor with a compiler.</p>
+          </p>
+          <!-- Quick Start -->
+          <hr>
+          <h5 class="display-5 mb-3 mt-5">C++ Quickstart</h5>
+          <p class="user-select-auto" style="font-size: 1.2rem;">
+            Let's create our first C++ file.<br>
+            Open Codeblocks and go to <span class="font-weight-bold"> File > New > Empty File.</span><br>
+            Write the following C++ code and save the file as myfirstprogram.cpp <span class="font-weight-bold">(File >
+              Save File as):</span>
+          </p>
+
+          <code>
+                         // myfirstprogram.cpp
+          </code>
+          <div class="col-sm-12 codes">
+            #include &ltiostream&gt <br>
+            using namespace std;<br>
+
+            int main() {<br>
+            &nbsp; cout << "Hello World!" ;<br>
+              &nbsp; return 0;<br>
+              }
+          </div>
+          <hr>
+        </div>
+
+        <div class="col-sm-12">
+          <a name="syntax"></a>
+          <h4 class="display-4 mb-2 mt-5">C++ Syntax</h4>
+          <hr class="hr1">
+          <h5 class="display-5 mb-3 mt-3">C++ Syntax</h5>
+          <code>// Example</code>
+          <div class="col-sm-12 codes">
+            <p> #include &ltiostream&gt <br>
+              using namespace std;<br>
+
+              int main() {<br>
+              &nbsp; cout << "Hello World!" ;<br>
+                &nbsp; return 0;<br>
+                }
+            </p>
+          </div>
+          <hr>
+          <div>
+            <h5 class="display-5 mb-2 mt-5">
+              Code Explained
+            </h5>
+            <p class="user-selected-auto font-weight-light" style="font-size: 1.2rem;">
+              <span class="font-weight-bold">Line 1:&nbsp;&nbsp;</span><code>#include &ltiostream&gt</code> is <span
+                class="font-weight-bold"> a header file library</span> that lets us work with input and output objects,
+              such as <code> cout </code> (used in line 5). Header files add functionality to C++ programs.
+              <br>
+              <span class="font-weight-bold">Line 2:&nbsp;&nbsp;</span> <code> using namespace  std</code> means that we
+              can use names for objects and variables from the standard library.
+              <br>
+              <span class="font-weight-bold">Line 3:&nbsp;&nbsp;</span>A blank line. C++ ignores white space.
+              <br>
+              <span class="font-weight-bold">Line 4:&nbsp;&nbsp;</span> Another thing that always appear in a C++
+              program, is <code> int main()</code>. This is called a function. Any code inside its curly brackets {}
+              will be executed.
+              <br>
+              <span class="font-weight-bold">Line 5:&nbsp;&nbsp;</span> <code> cout</code> (pronounced "see-out") is an
+              object used together with the insertion operator (<code><<</code>) to output/print text. In our example it
+              will output "Hello World".
+              <br>
+              <span class="font-weight-bold">Line 6:&nbsp;&nbsp;</span> <code>return 0</code> ends the main function.
+              <br>
+              <span class="font-weight-bold">Line 7:&nbsp;&nbsp;</span>Do not forget to add the closing curly bracket
+              <code> }</code> to actually end the main function.
+            </p>
+          </div>
+          <hr>
+          <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
+              Top</button></a>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <a name="comment"></a>
+
+        <h4 class="display-4 mb-2 mt-3">C++ Comments</h4>
+        <hr style="border: 0;
+        height: 1px;
+        margin-bottom: 50px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+
+        <h5 class="mb-3 mt-5">
+          C++ Comments
+        </h5>
+        <p class="user-selected-auto" style="font-size: 1.2rem;">
+          Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent
+          execution when testing alternative code. Comments can be singled-lined or multi-lined.
+
+          Single-line comments start with two forward slashes (<code>//</code>).
+
+          Any text between <code>//</code> and the end of the line is ignored by the compiler (will not be executed).
+        </p>
+        <p style="font-size: 1.1rem;">This is example of single line comment.</p>
+        <div class="codes">
+          <p>
+            <code style="color: green;">// This is a comment</code><br>
+            cout << "Hello World!" ; </p>
+        </div>
+        <p style="font-size: 1.1rem;">This is example of Multi lines comment.</p>
+        <div class="codes">
+          <p>
+            <code style="color: green;">/* The code below will print the words Hello World!
+              to the screen, and it is amazing */</code><br>
+            cout << "Hello World!" ; </p>
+        </div>
+        <hr>
+        <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
+          Top</button></a>
+      </div>
+
+      <div class="col-sm-12">
+        <a name="var"></a>
+        <h4 class="display-4 mb-2 mt-3">C++ Variables</h4>
+        <hr class="hr1">
+        <h5 class="mt-3 mb-2">C++ Variables</h5>
+        <p class="" style="font-size: 1.2rem;">
+          Variables are containers for storing data values.
+<br>
+In C++, there are different types of variables (defined with different keywords), for example:
+<ul>
+  
+</ul>
+        </p>
+      </div>
+
+    </div>
+  </div>
+  {% endblock content %}
