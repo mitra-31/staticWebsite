@@ -2,14 +2,14 @@
 
 
 {% block title %}
-C
+CPP
 {% endblock title %}
 
 
 
 {% block content %}
 <style>
-  .container {
+  html {
     scroll-behavior: smooth;
   }
 
@@ -46,23 +46,23 @@ C
             <li class="list-group-item">Get Started</li>
           </a>
           <a href="#syntax">
-          <li class="list-group-item">Syntax</li>
-        </a>
-        <a href="#comment">
-          <li class="list-group-item">Comments</li>
-        </a>
-        <a href="#var">
-          <li class="list-group-item">Variables</li>
-        </a>
-        <a href="#userinput">
-          <li class="list-group-item">User Inputs</li>
-        </a>
-        <a href="#datatype">
-          <li class="list-group-item">Data types</li>
-        </a>
-        <a href="#operators">
-          <li class="list-group-item">Operators</li>
-        </a>
+            <li class="list-group-item">Syntax</li>
+          </a>
+          <a href="#comment">
+            <li class="list-group-item">Comments</li>
+          </a>
+          <a href="#var">
+            <li class="list-group-item">Variables</li>
+          </a>
+          <a href="#userinput">
+            <li class="list-group-item">User Inputs</li>
+          </a>
+          <a href="#datatype">
+            <li class="list-group-item">Data types</li>
+          </a>
+          <a href="#operators">
+            <li class="list-group-item">Operators</li>
+          </a>
         </ul>
       </div>
       <div class="col-sm-6">
@@ -80,6 +80,7 @@ C
     </div>
     <div class="seprator"></div>
     <div class="row">
+      <!-- Get Started -->
       <div class="col-sm-12">
         <a name="getstarted"></a>
         <h4 class="display-3 mb-2">Get Started</h4>
@@ -177,6 +178,7 @@ C
               Top</button></a>
         </div>
       </div>
+      <!-- Comments -->
       <div class="col-sm-12">
         <a name="comment"></a>
 
@@ -212,9 +214,9 @@ C
         </div>
         <hr>
         <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
-          Top</button></a>
+            Top</button></a>
       </div>
-
+      <!-- Variables -->
       <div class="col-sm-12">
         <a name="var"></a>
         <h4 class="display-4 mb-2 mt-3">C++ Variables</h4>
@@ -222,14 +224,167 @@ C
         <h5 class="mt-3 mb-2">C++ Variables</h5>
         <p class="" style="font-size: 1.2rem;">
           Variables are containers for storing data values.
-<br>
-In C++, there are different types of variables (defined with different keywords), for example:
-<ul>
-  
-</ul>
+          <br>
+          In C++, there are different types of variables (defined with different keywords), for example:
+        <ul>
+          <li><code> int</code> - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+          <li><code>double</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+          <li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single
+            quotes</li>
+          <li><code>string</code> - stores text, such as "Hello World". String values are surrounded by double quotes
+          </li>
+          <li><code>bool</code> - stores values with two states: true or false</li>
+        </ul>
+        </p>
+        <h5 class="mt-3 mb-2">Declaring Variables</h5>
+        <p style="font-size: 1.2rem;">
+          To create a variable, you must specify the type and assign it a value: <br>
+          <code>Syntax</code>
+        <div class="codes">
+          type variables = value;
+        </div>
+        Where type is one of C++ types (such as <code>int</code>), and variable is the name of the variable (such as
+        <span class="font-weight-bold"> x</span> or <span class="font-weight-bold"> myName</span>). The <span
+          class="font-weight-bold">equal sign</span> is used to assign values to the variable. <br>
+        To create a variable that should store a number, look at the following example: <br>
+        <code>Example <br>Create a variable called<span class="font-weight-bold">  myNum </span> of type <code> int</code>
+        and assign it the value <span class="font-weight-bold">15:</span></code>
+        <div class="codes">
+          int myNum; <br>
+          myNum = 15; <br>
+          cout << myNum; <br>
+        </div>
+        </p>
+        <h6 style="font-size: 1.1rem;">Other Data Types</h6>
+        <p class="font-size:1.2rem">
+          A demonstration of other data types: <br>
+          <code>Example <br></code>
+        <div class="codes">
+          int myNum = 5; <code style="color: green;">// Integer (whole number without decimals)</code> <br>
+          double myFloatNum = 5.99; <code style="color: green;"> // Floating point number (with decimals)</code> <br>
+          char myLetter = 'D';<code style="color: green;"> // Character</code> <br>
+          string myText = "Hello"; <code style="color: green;">// String (text)</code> <br>
+          bool myBoolean = true; <code style="color: green;">// Boolean (true or false)</code> <br>
+        </div>
+        </p>
+        <h6 style="font-size: 1.1rem;">Declare Many Variables</h6>
+        <p style="font-size: 1.2rem;">
+          To declare more than one variable of the <span class="font-weight-bold"> same type</span>, use a
+          comma-separated list: <br>
+          <code>Example <br></code>
+        <div class="codes">
+          int x = 5, y = 6, z = 50; <br>
+          cout << x + y + z; <br>
+        </div>
+        </p>
+        <hr>
+        <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
+            Top</button></a>
+      </div>
+      <!-- User Input -->
+      <div class="col-sm-12">
+        <a name="userinput"></a>
+        <h4 class="display-4 mb-2 mt-3">C++ User Input</h4>
+        <hr class="hr1">
+        <h5 class="mt-3 mb-2">C++ User Input</h5>
+        <p class="" style="font-size: 1.2rem;">
+          You have already learned that <code>cout</code> is used to output (print) values. Now we will use
+          <code>cin</code> to get user input. <br>
+
+          <code> cin</code> is a predefined variable that reads data from the keyboard with the extraction operator
+          (<code>>></code>). <br>
+
+          In the following example, the user can input a number, which is stored in the variable <code>x</code>. Then we
+          print the
+          value of <code>x</code>: <br>
+          <code>Example <br></code>
+        <div class="codes">
+          int x;
+          cout << "Type a number: " ; <code style="color: green;"> // Type a number and press enter</code><br>
+            cin >> x; <code style="color: green;">// Get user input from the keyboard</code><br>
+            cout << "Your number is: " << x; <code style="color: green;">// Display the input value </code><br>
+        </div>
+        </p>
+        <hr>
+        <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
+            Top</button></a>
+      </div>
+      <!-- Data Types -->
+      <div class="col-sm-12">
+        <a name="datatype"></a>
+        <h4 class="display-4 mb-2 mt-3">C++ Data Types</h4>
+        <hr class="hr1">
+        <h5 class="mt-3 mb-2">C++ Data Types</h5>
+        <p class="" style="font-size: 1.2rem;">
+          As explained in the Variables chapter, a variable in C++ must be a specified data type: <br>
+          <code>Example</code>
+        <div class="codes">
+          int myNum = 5; <code style="color: green;">// Integer (whole number)</code><br>
+          float myFloatNum = 5.99; <code style="color: green;">// Floating point number</code><br>
+          double myDoubleNum = 9.98; <code style="color: green;"></code>// Floating point number</code><br>
+          char myLetter = 'D'; <code style="color: green;"></code>// Character</code><br>
+          bool myBoolean = true; <code style="color: green;"></code>// Boolean</code><br>
+          string myText = "Hello"; <code style="color: green;"></code>// String</code><br>
+        </div>
+        </p>
+        <h4 class="display-4 mb-3 mt-2">Basic Data types</h4>
+        <hr class="hr1">
+        <p style="font-weight: 1.1rem;">The data type specifies the size and type of information the variable will
+          store: <br></p>
+        <table class="table">
+          <caption>List of Data Types</caption>
+          <thead>
+            <tr>
+              <th scope="col">Data Type</th>
+              <th scope="col">Size</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>int</td>
+              <td>4 Bytes</td>
+              <td> Stores whole numbers, without decimals</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td>4 bytes</td>
+              <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 7 decimal digits
+              </td>
+            </tr>
+            <tr>
+              <td>dobule</td>
+              <td>8 bytes</td>
+              <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
+              </td>
+            </tr>
+            <tr>
+              <td>Boolean</td>
+              <td>1 byte</td>
+              <td> Stores true or false values</td>
+            </tr>
+            <tr>
+              <td>char</td>
+              <td>1 byte</td>
+              <td>Stores a single character/letter/number, or ASCII values</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <a href="#top"> <button class="btn btn-primary-outline float-right"><i class="fa fa-arrow-up"></i>
+            Top</button></a>
+        <!-- User Input -->
+      </div>
+      <!-- Operators -->
+      <div class="col-sm-12">
+        <a name="operators"></a>
+        <h4 class="display-4 mb-2 mt-3">C++ Operators</h4>
+        <hr class="hr1">
+        <h5 class="mt-3 mb-2">C++ Operators</h5>
+        <p style="font-weight: 1.1rem;">
+
         </p>
       </div>
-
     </div>
   </div>
   {% endblock content %}

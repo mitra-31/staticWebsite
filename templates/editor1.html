@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Python Compiler
+{% endblock title %}
+
+
+
+{% block content %}
+
+<style>
+    .editor{
+        margin-top: 50px;
+    }
+</style>
+
+
+<div class="dropdown show">
+    <a class="btn btn-secondary dropdown-toggle mb-10" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Language
+    </a>
+  
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        
+      <a class="dropdown-item active" href="/java_compiler">Java</a>
+      <a class="dropdown-item " href="/python_compiler">Python</a>
+    </div>
+  </div>
+
+
+    <div class="editor">
+        <iframe src="https://trinket.io/embed/java/ee455c1432" width="100%" height="460" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+
+
+{% endblock content %}
+
+
+</body>
+</html>
