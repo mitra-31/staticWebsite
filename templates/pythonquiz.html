@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Python
+{% endblock title %}
+
+
+
+{% block content %}
+
+<style>
+    .answerBlock {
+        margin: 15px 0px;
+    }
+
+    .buttonGroup {
+        margin: 5px 0px;
+    }
+
+    #btn {
+        margin-left: 10px;
+    }
+</style>
+
+<div class="container">
+    <div id='row' class="row">
+        <div class="col-sm-12">
+            <h4 class="display-3 mb-2">Python Quiz</h4>
+            <hr class="hr1">
+        </div>
+        <div class="col-sm-12">
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <a class="btn btn-secondary active" href="/python-quiz" name="set-1"   role="button"onclick="change()">Set 1</a>
+                    <a class="btn btn-primary" href="/python-quiz-set-2"  role="button"onclick="change()">Set 2</a>
+                    <a class="btn btn-primary" href="/python-quiz-set-3" role="button"onclick="change()">Set 3</a>
+                    <a class="btn btn-primary" href="/python-quiz-set-4" role="button"onclick="change()">Set 4</a>
+                    <a class="btn btn-primary" href="/python-quiz-set-5" role="button"onclick="change()">Set 5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+
+    <script src="{{ url_for('static' , filename='js/quiz.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    {% endblock content %}

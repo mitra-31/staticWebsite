@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,jsonify
 
 
 
@@ -26,7 +26,7 @@ def java():
 
 @app.route("/python")
 def python():
-    return render_template("develop.html")
+    return render_template("py.html")
 
 
 @app.route("/cpp-quiz")
@@ -44,8 +44,14 @@ def javaQuiz():
 
 
 @app.route("/python-quiz")
-def pythonQuiz():
-    return render_template("develop.html")
+def pythonQuiz1():
+    x = "abc"
+    return render_template("pythonquiz.html",x=x)
+
+@app.route("/python-quiz-set-2", methods=["POST"])
+def pythonQuiz2():
+    x = "abba"
+    return jsonify({"data":render_template("py2.html",x=x)})
 
 @app.route("/python_compiler")
 def python_compiler():
@@ -59,4 +65,4 @@ def java_compiler():
 
 
 if __name__ == "__main__":
-    app.run(threaded=True, port=5000)
+    app.run(debug=True,threaded=True, port=5000)

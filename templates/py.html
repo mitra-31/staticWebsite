@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Python
+{% endblock title %}
+
+
+
+{% block content %}
+<style>
+    p {
+        font-weight: 1.2rem;
+        margin: 7px 0px;
+    }
+
+    code {
+        font-weight: 1.2rem;
+        color: blue;
+    }
+
+    span {
+        color: green;
+    }
+
+    pre {
+        margin: 0px;
+    }
+
+    .codes {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        margin: 15px;
+        padding: 5px 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 900;
+    }
+</style>
+<div class="row">
+    <div class="col-sm-12">
+        <h4 class="display-4">Learn Python</h4>
+    </div>
+</div>
+
+<a name="top"></a>
+
+<div class="container">
+
+    <!--List of content -->
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="list-group mb-2">
+                <a href="#getstarted">
+                    <li class="list-group-item">Get Started</li>
+                </a>
+                <a href="#syntax">
+                    <li class="list-group-item">Syntax</li>
+                </a>
+                <a href="#comment">
+                    <li class="list-group-item">Comments</li>
+                </a>
+                <a href="#var">
+                    <li class="list-group-item">Variables</li>
+                </a>
+                <a href="#userinput">
+                    <li class="list-group-item">User Inputs</li>
+                </a>
+                <a href="#datatype">
+                    <li class="list-group-item">Data types</li>
+                </a>
+                <a href="#operators">
+                    <li class="list-group-item">Operators</li>
+                </a>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+
+            <ul class="list-group mb-5">
+                <li class="list-group-item">Strings</li>
+                <li class="list-group-item">Contorl Flows</li>
+                <li class="list-group-item">Arrays</li>
+                <li class="list-group-item">Pointers</li>
+                <li class="list-group-item">Refrences</li>
+                <li class="list-group-item">Functions</li>
+                <li class="list-group-item">Classes</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <!-- Get Started -->
+        <div class="col-sm-12">
+            <a name="getstarted"></a>
+            <h4 class="display-3 mb-2">Get Started</h4>
+            <hr class="hr1">
+            <h5 class=" mb-2 mt-2">Python Install</h5>
+            <hr>
+            <p> Many PCs and Macs will have python already installed. <br>
+
+                To check if you have python installed on a Windows PC, search in the start bar for Python or run the
+                following on the Command Line (cmd.exe): <br></p>
+            <code>Open cmd: <br></code>
+            <div class="codes">
+                C:\Users\your name> python --version
+            </div>
+            <p> To install python in your system follow this blog below: <br> <a
+                    href="https://phoenixnap.com/kb/how-to-install-python-3-windows">https://phoenixnap.com/kb/how-to-install-python-3-windows</a>
+            </p>
+        </div>
+        <!-- Syntax -->
+        <div class="col-sm-12">
+            <a name="syntax"></a>
+            <h4 class="display-3 mb-2">Python Syntax</h4>
+            <hr class="hr1">
+            <h5 class=" mb-2 mt-2">Python Syntax</h5>
+            <hr>
+            <p>Python syntax can be executed by writing directly in the Command Line <br></p>
+            <code>Open Cmd: <br></code>
+            <div class="codes">
+                C:\Users\your name> python <br>
+                Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)] on win32 <br>
+                Type "help", "copyright", "credits" or "license" for more information. <br>
+                >>> print("Hello World") # After this hit enter.
+            </div>
+            <code>output <br></code>
+            <div class="codes">
+                Hello World
+            </div>
+            <h5 class="mb-2 mt-2">Python Indentation</h5>
+            <hr>
+            <p>Indentation refers to the spaces at the beginning of a code line. <br>
+
+                Where in other programming languages the indentation in code is for readability only, the indentation in
+                Python is very important. <br>
+
+                Python uses indentation to indicate a block of code. <br></p>
+            <code>Example <br></code>
+            <div class="codes">
+                <pre>if 5 > 2:
+    print("Five is greater than two!")</pre>
+            </div>
+        </div>
+        <!-- Comments -->
+        <div class="col-sm-12">
+            <a name="comment"></a>
+            <h4 class="display-3 mb-2">Python Comments</h4>
+            <hr class="hr1">
+            <h5 class=" mb-2 mt-2">creating a comments</h5>
+            <p>Comments starts with a <code>#</code>, and Python will ignore them:</p>
+            <code>Example <br></code>
+            <div class="codes">
+                <span>#This is a comment</span><br>
+                print("Hello, World!")
+            </div>
+            <p>Comments can be placed at the end of a line, and Python will ignore the rest of the line: <br></p>
+            <code>Example <br></code>
+            <div class="codes">
+                print("Hello, World!")<span>#This is a comment</span><br>
+            </div>
+        </div>
+        <!-- Variables -->
+        <div class="col-sm-12">
+            <a name="comment"></a>
+            <h4 class="display-3 mb-2">Python Variables</h4>
+            <hr class="hr1">
+            <h5 class="mb-2 mt-2">Variables</h5>
+            <p>Variables are containers for storing data values.</p>
+            <h5 class="mb-2 mt-2">Creating Variables</h5>
+            <p>
+                Python has no command for declaring a variable. <br>
+
+                A variable is created the moment you first assign a value to it. <br>
+            </p>
+            <code> Example</code>
+            <div class="codes">
+                x = 5 <br>
+                y = "John" <br>
+                print(x) <br>
+                print(y) <br>
+            </div>
+            <h5 class="mb-2 mt-2">Assigning Values to Variables</h5>
+            <p>Python variables do not need explicit declaration to reserve memory space. The declaration happens
+                automatically when you assign a value to a variable. The equal sign (=) is used to assign values to
+                variables. <br>
+
+                The operand to the left of the = operator is the name of the variable and the operand to the right of
+                the = operator is the value stored in the variable <br></p>
+            <code>Example</code>
+            <div class="codes">
+
+                age = 25 <span># An integer assignment</span>
+                salary = 30000.0 <span> # A floating point</span>
+                name = "John" <span># A string</span>
+                print(age)
+                print(salary)
+                print(name)
+            </div>
+            <p>
+                Here, 25, 30000.0 and "John" are the values assigned to age, salary, and name variables,
+                respectively. This produces the following result −
+            </p>
+            <code>Output</code>
+            <div class="codes">
+                25 <br>
+                30000.0 <br>
+                jhon <br>
+            </div>
+            <h5 class="mb-2 mt-2">Multiple Assignment</h5>
+            <p>Python allows you to assign a single value to several variables simultaneously.</p>
+            <code>Example</code>
+            <div class="codes">
+                a = b = c = 1
+            </div>
+            <p>
+                Here, an integer object is created with the value 1, and all three variables are assigned to the same
+                memory location.
+            </p>
+            <br>
+            <p>
+                You can also assign multiple objects to multiple variables.
+            </p>
+            <code>Example</code>
+            <div class="codes">
+                a,b,c = 1,2,"john"
+            </div>
+            <p>Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one
+                string object with the value "john" is assigned to the variable c.</p>
+            <h5 class="mb-2 mt-2">Casting</h5>
+            <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+            <code>Example</code>
+            <div class="codes">
+                x = str(3) <span># x will be '3'</span> <br>
+                y = int(3) <span> # y will be 3</span> <br>
+                z = float(3) <span># z will be 3.0</span> <br>
+            </div>
+            <h5 class="mb-2 mt-2">Get the type of variable</h5>
+            <p>You can get the data type of a variable with the <code>type()</code> function.</p>
+            <code>Example</code>
+            <div class="codes">
+                x = 5 <br>
+                y = "John" <br>
+                print(type(x)) <br>
+                print(type(y)) <br>
+            </div>
+            <p>String variables can be declared either by using single or double quotes:</p>
+            <div class="codes">
+                x = "John" <br>
+                <span> # is the same as</span>
+                x = 'John' <br>
+            </div>
+            <h5 class="mb-2 mt-2">Case-Sensitive</h5>
+            <p>Variable names are case-sensitive.</p>
+            <code>Example</code>
+            <div class="codes">
+                a = 4 <br>
+                A = "Sally" <br>
+                <span> #A will not overwrite a</span>
+            </div>
+            <h5 class="mb-2 mt-2">Unpack a collection</h5>
+            <p>If you have a collection of values in a list, tuple etc. Python allows you extract the values into
+                variables. This is called unpacking.</p>
+            <code>Example</code>
+            <div class="codes">
+                fruits = ["apple", "banana", "cherry"] <br>
+                x, y, z = fruits <br>
+                print(x) <br>
+                print(y) <br>
+                print(z) <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
