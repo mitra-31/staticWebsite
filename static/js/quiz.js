@@ -26,6 +26,74 @@ set1 = [
             'b': "False"
         },
         answer: 'b'
+    },
+    {
+        question: "Which one is NOT a legal variable name?",
+        choices: {
+            'a': "Myvar",
+            'b': "my-var",
+            'c': "my_var",
+            'd': "_myvar"
+        },
+        answer: 'a'
+    },
+    {
+        question: "How do you create a variable with the numeric value 5?",
+        choices: {
+            'a': "x = 5",
+            'b': "x = int(5)",
+            'c': "Both the answers are correct"
+        },
+        answer: 'b'
+    },
+    {
+        question: "What is the correct file extension for Python files?",
+        choices: {
+            'a': ".pyth",
+            'b': ".pt",
+            'c': ".py",
+            'd': ".pyt"
+        },
+        answer: 'c'
+    },
+    {
+        question: "How do you create a variable with the floating number 2.8?",
+        choices: {
+            'a': "x = 2.8",
+            'b': "x = float(2.8)",
+            'c': "both the answers are correct"
+        },
+        answer: 'b'
+    },
+    {
+        question: "What is the correct syntax to output the type of a variable or object in Python?",
+        choices: {
+            'a': "print(type(x))",
+            'b': "print(typeof(x))",
+            'c': "print(typeofx)",
+            'd': "print(typeOfx)"
+        },
+        answer: 'a'
+    },
+    {
+        question: "What is the correct way to create a function in Python?",
+        choices: {
+            'a': "function myfunction(){..}",
+            'b': "def myfunction():",
+            'c': "create myfunction(){..}",
+            'd': "void myfunction(){..}"
+        },
+        answer: 'b'
+    },
+    {
+        question: "Which method can be used to return a string in upper case letters?",
+        choices: {
+            'a': "toUpperCase()",
+            'b': "upper()",
+            'c': "uppercase()",
+            'd': "upperCase()"
+        },
+        answer: 'a'
     }]
 
 
@@ -44,7 +112,8 @@ function addQuestions(question, questionNo) {
     var questionBlock = document.createElement("div");
     questionBlock.setAttribute("id", "questions")
     block.appendChild(questionBlock);
-    var text = document.createTextNode(question);
+    var Question = (parseInt(questionNo) + 1) + ".  " + question;
+    var text = document.createTextNode(Question);
     questionBlock.appendChild(text);
     var element = document.getElementById("row");
     element.appendChild(block);
