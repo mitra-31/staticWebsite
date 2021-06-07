@@ -47,11 +47,11 @@ body {
       background:#f3f2f2;
   }
  
-.card{
+.card-ud{
   box-shadow: 0 1rem 2.1rem -0.7rem black;
 }
 
-.card:hover{
+.card-ud:hover{
   padding: 10px;
   margin: 1px;
   box-shadow: 0 1rem 2.1rem -0.7rem red;
