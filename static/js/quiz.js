@@ -98,12 +98,30 @@ set1 = [
 
 
 
-function checkAnswer() {
-    var questionNumber = document.getElementById(1);
-    var answersBlock = document.getElementById("answers-" + parseInt(questionNo) + 1 + "");
-    console.log(questionNumber);
-    console.log(answersBlock);
+
+function checkAnswer(id) {
+    var buttonBox = document.createElement('div');
+    buttonBox.innerHTML += '<div class="collapse" id="answerBox-' + (parseInt(id) + 1) + '">'
+        
+        + ' </div>';
+    document.getElementById(parseInt(id) + 1).appendChild(buttonBox);
+    var block = document.getElementById("answers-" + (parseInt(id) + 1));
+    var checked = block.querySelector("input[type='checkbox']:checked").getAttribute("valid");
+    if (checked == null) {
+
+        var checkAnswer = document.getElementById('answerBox-' + (parseInt(id) + 1));
+        checkAnswer.innerHTML = '<div class="card card-body p-3 mb-2 bg-danger text-white">'
+        + ' Wrong Answer'
+        + '</div>'
+    }
+    else if (checked == "valid") {
+        var checkAnswer = document.getElementById('answerBox-' + (parseInt(id) + 1));
+        checkAnswer.innerHTML = '<div class="card card-body p-3 mb-2 bg-success text-white">'
+        + ' Correct Answer'
+        + '</div>';
+    }
 }
+
 
 function addQuestions(question, questionNo) {
     var block = document.createElement("div");
@@ -120,7 +138,7 @@ function addQuestions(question, questionNo) {
 
 }
 
-function addChoices(choices, questionNo) {
+function addChoices(choices, answer, questionNo) {
     /*  <div id="answers">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
@@ -131,15 +149,22 @@ function addChoices(choices, questionNo) {
 
     var answerBlock = document.createElement("div");
     answerBlock.classList.add("answerBlock");
-    answerBlock.setAttribute("id", "answers-" + parseInt(questionNo) + 1 + "");
+    answerBlock.setAttribute("id", "answers-" + (parseInt(questionNo) + 1) + "");
     for (option in choices) {
         var formBox = document.createElement('div');
         formBox.classList.add("form-check");
         //formBox.classList.add("mt-15");
         formBox.setAttribute("id", option)
-        formBox.innerHTML = '<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value=' + option + '>';
-        formBox.innerHTML += '<label class="form-check-label" for="exampleRadios1">' + choices[option] + '</label>';
-        answerBlock.appendChild(formBox);
+        if (option == answer) {
+            formBox.innerHTML = '<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value=' + option + ' valid="valid">';
+            formBox.innerHTML += '<label class="form-check-label" for="exampleRadios1">' + choices[option] + '</label>';
+            answerBlock.appendChild(formBox);
+        }
+        else {
+            formBox.innerHTML = '<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value=' + option + '>';
+            formBox.innerHTML += '<label class="form-check-label" for="exampleRadios1">' + choices[option] + '</label>';
+            answerBlock.appendChild(formBox);
+        }
         var thisQuestionBlock = document.getElementById(parseInt(questionNo) + 1);
         thisQuestionBlock.appendChild(answerBlock);
     }
@@ -158,9 +183,10 @@ function addButtons(questionNo) {
     var buttonBox = document.createElement('div');
     buttonBox.classList.add("buttonGroup");
     buttonBox.setAttribute("id", "buttonGroup");
-    buttonBox.innerHTML = '<button type="button" id="btn" class="btn btn-primary" onclick="checkAnswer(' + parseInt(questionNo) + 1 + ');">Check Answer</button>'
+    buttonBox.innerHTML = '<button class="btn btn-primary"  type="button" data-toggle="collapse" data-target="#answerBox-' + (parseInt(questionNo) + 1) + '" aria-expanded="false" aria-controls="answer-' + (parseInt(questionNo) + 1) + '" onclick="checkAnswer(' + questionNo + ')">Check Answer</button>';
     buttonBox.innerHTML += '<button type="button" id="btn" class="btn btn-secondary" onclick="Answer()">Submit</button>';
-    buttonBox.innerHTML += '<hr>'
+    buttonBox.innerHTML += '<hr>';
+
     document.getElementById(parseInt(questionNo) + 1).appendChild(buttonBox);
 }
 
@@ -168,10 +194,13 @@ function addButtons(questionNo) {
 function genrateQuiz(set) {
     for (ques in set) {
         addQuestions(set[ques].question, ques);
-        addChoices(set[ques].choices, ques);
+        addChoices(set[ques].choices, set[ques].answer, ques);
         addButtons(ques);
     }
 }
 
 genrateQuiz(set1);
+
+
+
 
