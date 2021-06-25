@@ -5,4 +5,4 @@
 
 Home Page:
 
-![home page](static/img/home.jpg)
+![home page](static/imgs/home.jpg)
