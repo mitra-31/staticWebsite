@@ -24,19 +24,46 @@ function checkAnswer(id) {
     }
 }
 
-
-function Answer() {
+function submitAnswer(id) {
+    //block.querySelector("input[type='checkbox']:checked").style.css = "Red"
     var buttonBox = document.createElement('div');
     buttonBox.innerHTML += '<div class="collapse" id="answerBox-' + (parseInt(id) + 1) + '">'
 
         + ' </div>';
     document.getElementById(parseInt(id) + 1).appendChild(buttonBox);
     var block = document.getElementById("answers-" + (parseInt(id) + 1));
+    var checkbox = block.querySelectorAll("input[type='radio']")
     var checked = block.querySelector("input[type='radio']:checked").getAttribute("valid");
-    var correctAnswer = block.querySelector("input[type='radio']").getAttribute("valid");
-    console.log(checked);
-    console.log(checkAnswer);
+    for (let i in checkbox)
+    {
+        try{
+            if(checkbox[i].getAttribute("valid"))
+            {
+                var validAnswer = checkbox[i].getAttribute("value");
+            }
+        }
+        catch(err)
+        {
+            continue
+        }
+    }
+    if (checked == null) {
+
+        var checkAnswer = document.getElementById('answerBox-' + (parseInt(id) + 1));
+        checkAnswer.innerHTML = '<div class="card card-body p-3 mb-2 bg-danger text-white">'
+            + ' Wrong Answer <br>'
+            +validAnswer+' is the Correct Answer'
+            + '</div>'
+    }
+    else if (checked == "valid") {
+        var checkAnswer = document.getElementById('answerBox-' + (parseInt(id) + 1));
+        checkAnswer.innerHTML = '<div class="card card-body p-3 mb-2 bg-success text-white">'
+            + ' Correct Answer'
+            + '</div>';
+    }
 }
+
+
 
 
 function addQuestions(question, questionNo) {
@@ -103,7 +130,7 @@ function addButtons(questionNo) {
     buttonBox.classList.add("buttonGroup");
     buttonBox.setAttribute("id", "buttonGroup");
     buttonBox.innerHTML = '<button class="btn btn-primary"  type="button" data-toggle="collapse" data-target="#answerBox-' + (parseInt(questionNo) + 1) + '" aria-expanded="false" aria-controls="answer-' + (parseInt(questionNo) + 1) + '" onclick="checkAnswer(' + questionNo + ')">Check Answer</button>';
-    buttonBox.innerHTML += '&nbsp;&nbsp;<button type="button" id="btn-answer" class="btn btn-secondary" onclick="Answer()">Submit</button>';
+    buttonBox.innerHTML += '&nbsp;&nbsp;<button type="button" data-toggle="collapse" data-target="#answerBox-' + (parseInt(questionNo) + 1) + '" aria-expanded="false" aria-controls="answer-' + (parseInt(questionNo) + 1) + '" id="btn-answer" class="btn btn-secondary" onclick="submitAnswer('+ questionNo + ')">Submit</button>';
     buttonBox.innerHTML += '<hr>';
 
     document.getElementById(parseInt(questionNo) + 1).appendChild(buttonBox);
@@ -112,7 +139,7 @@ function addButtons(questionNo) {
 
 function genrateQuiz(i) {
     //var CurrentSet = document.getElementsByClassName("active").item(0).getAttribute("name");
-    fetch("/static/js/pyquiz.json")
+    fetch("/static/js/json/pyquiz.json")
         .then(function (resp) {
             return resp.json();
         })
@@ -122,7 +149,7 @@ function genrateQuiz(i) {
             MainBlock.setAttribute("id", "MainBlock");*/
 
             for (ques in data[i]) {
-                console.log(ques)
+               // console.log(ques)
                 addQuestions(data[i][ques].question, ques);
                 addChoices(data[i][ques].choices, data[i][ques].answer, ques);
                 addButtons(ques);

@@ -6,14 +6,16 @@ app = Flask(__name__)
 
 
 @jf.use(app)
-class App:
+class Python:
     
     def __init__(self):
         pass
     
     def hello(self,id):
         self.js.document.getElementById('MainBlock').innerHTML = self.js.genrateQuiz(id)
-    
+
+
+
 
 
 @app.route("/")
@@ -41,11 +43,8 @@ def python():
 
 @app.route("/cpp-quiz")
 def cppQuiz():
-    return render_template("cpp.html")
+    return render_template("cppquiz.html")
 
-@app.route("/c-quiz")
-def cQuiz():
-    return render_template("develop.html")
 
 
 @app.route("/java-quiz")
@@ -55,7 +54,7 @@ def javaQuiz():
 
 @app.route("/python-quiz")
 def pythonQuiz1():
-    return App.render(render_template("pythonquiz.html"))
+    return Python.render(render_template("pythonquiz.html"))
 
 
 

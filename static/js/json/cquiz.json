@@ -1,0 +1,42 @@
+[
+    [
+        {
+            "question":"What is a correct syntax to output 'Hello World' in C++?",
+            "choices":{
+                "a":"cout << 'Hello World';",
+                "b":"console.log('Hello World')",
+                "c":"printf('Hello World');",
+                "d":"print('Hello World');"
+            },
+            "answer":"a"
+        },
+        {
+            "question":"C++ is an alias of C#",
+            "choices":{
+                "a":"False",
+                "b":"True"
+            },
+            "answer":"a"
+        },
+        {
+            "question":"'cin' is an __",
+            "choices":{
+            "a":"Class",
+            "b":"Object",
+            "c":"Package",
+            "d":"Namespace"
+            },
+            "answer":"b"
+        },
+        {
+            "question":"A single line comment in C++ language source code can begin with _____",
+            "choices":{
+                "a":";",
+                "b":":",
+                "c":"/*",
+                "d":"//"
+            },
+            "answer":"d"
+        }
+    ]
+]

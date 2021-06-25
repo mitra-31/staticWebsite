@@ -2,7 +2,7 @@
 
 
 {% block title %}
-Python
+C++ Quiz
 {% endblock title %}
 
 
@@ -30,13 +30,13 @@ Python
 <div class="container">
     <div id='row' class="row">
         <div class="col-sm-12">
-            <h4 class="display-3 mb-2">Python Quiz</h4>
+            <h4 class="display-3 mb-2">C++ Quiz</h4>
             <hr class="hr1">
         </div>
         <div class="col-sm-12">
             <div class="btn-toolbar" id="sets" role="toolbar" aria-label="Toolbar with button groups">
                 <div class="btn-group mr-2 mb-5" role="group" aria-label="First group">
-                    <a class="btn btn-secondary active" id="default" href="/python-quiz" name="set1" role="button">Set
+                    <a class="btn btn-secondary active" id="default" href="/cpp-quiz" name="set1" role="button">Set
                         1</a>
                     <a class="btn btn-primary" id="py-set-2" href="#" onclick="change(1)" name="set2" role="button">Set 2</a>
                     <a class="btn btn-primary" id="py-set-3" href="#"onclick="change(2)" name="set3" role="button">Set 3</a>
@@ -61,11 +61,11 @@ Python
 
         function change(id)
         {
-            document.getElementById("MainBlock").innerHTML = genrateQuiz(id);
+            document.getElementById("MainBlock").innerHTML = genrateCppQuiz(id);
         }
 
     </script>
-    <script src="{{ url_for('static' , filename='js/quiz/pquiz.js') }}"></script>
+    <script src="{{ url_for('static' , filename='js/quiz/cquiz.js') }}"></script>
     <script src="{{ url_for('static' , filename='js/json/pyquiz.json') }}"></script>
     <script src="{{ url_for('static' , filename='js/sets.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
