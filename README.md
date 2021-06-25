@@ -3,15 +3,15 @@
 
 ## Screenshot
 
-**Home Page:**
+> **Home Page:**
 
 ![home page](static/imgs/home.jpg)
 
-**Learning Area:**
+> **Learning Area:**
 
 ![learning page](static/imgs/content.jpg)
 
-**Quiz:**
+> **Quiz:**
 
 ![quiz fig1](static/imgs/quiz1.jpg)
 
