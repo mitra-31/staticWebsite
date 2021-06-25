@@ -38,10 +38,10 @@ Python
                 <div class="btn-group mr-2 mb-5" role="group" aria-label="First group">
                     <a class="btn btn-secondary active" id="default" href="/python-quiz" name="set1" role="button">Set
                         1</a>
-                    <a class="btn btn-primary" id="py-set-2" href="#" onclick="server.hello(1)" name="set2" role="button">Set 2</a>
-                    <a class="btn btn-primary" id="py-set-3" href="#"onclick="server.hello(0)" name="set3" role="button">Set 3</a>
-                    <a class="btn btn-primary" id="py-set-4" href="#"onclick="server.hello(1)" name="set4" role="button">Set 4</a>
-                    <a class="btn btn-primary" id="py-set-5" href="#"onclick="server.hello(0)" name="set5" role="button">Set 5</a>
+                    <a class="btn btn-primary" id="py-set-2" href="#" onclick="change(1)" name="set2" role="button">Set 2</a>
+                    <a class="btn btn-primary" id="py-set-3" href="#"onclick="change(0)" name="set3" role="button">Set 3</a>
+                    <a class="btn btn-primary" id="py-set-4" href="#"onclick="change(1)" name="set4" role="button">Set 4</a>
+                    <a class="btn btn-primary" id="py-set-5" href="#"onclick="change(0)" name="set5" role="button">Set 5</a>
                 </div>
             </div>
         </div>
@@ -57,6 +57,11 @@ Python
                 current[0].className = current[0].className.replace("btn-secondary active", "btn-primary");
                 this.className = "btn btn-secondary active";
             });
+        }
+
+        function change(id)
+        {
+            document.getElementById("MainBlock").innerHTML = genrateQuiz(id);
         }
 
     </script>
