@@ -1,9 +1,19 @@
 from flask import Flask,render_template,jsonify
-
+import jyserver.Flask as jf
 
 
 app = Flask(__name__)
 
+
+@jf.use(app)
+class App:
+    
+    def __init__(self):
+        pass
+    
+    def hello(self,id):
+        self.js.document.getElementById('MainBlock').innerHTML = self.js.genrateQuiz(id)
+    
 
 
 @app.route("/")
@@ -45,7 +55,7 @@ def javaQuiz():
 
 @app.route("/python-quiz")
 def pythonQuiz1():
-    return render_template("pythonquiz.html")
+    return App.render(render_template("pythonquiz.html"))
 
 
 

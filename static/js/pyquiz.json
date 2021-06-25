@@ -94,6 +94,46 @@
             "d": "upperCase()"
         },
         "answer": "a"
+    },
+    {
+        "question": "Syntax error in python is detected by _________at _______",
+        "choices": {
+            "a": "compiler/ compile time",
+            "b": "interpreter/ run time",
+            "c": "compiler/run time",
+            "d": "interpreter/compile time"
+        },
+        "answer": "b"
+    },
+    {
+        "question":"What is output for − 2 * 2 **3",
+        "choices":{
+            "a":"12",
+            "b":"64",
+            "c":"16",
+            "d":"36"
+        },
+        "answer":"c"
+    },
+    {
+        "question":"Which options are correct to create an empty set in Python?",
+        "choices":{
+            "a":"[]",
+            "b":"()",
+            "c":"{}",
+            "d":"set()"
+        },
+        "answer":"d"
+    },
+    {
+        "question":"What will be the output of the following code? <br> minidict = { 'name': 'TutorialsPoint', 'name': 'website'}<br>print(minidict['name'])",
+        "choices":{
+            "a":"TutorialsPoint",
+            "b":"Website",
+            "c":"('TutorialsPoint','Website')",
+            "d":"It will show an Error"
+        },
+        "answer":"b"
     }
 ]
 ]
