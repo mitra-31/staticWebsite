@@ -1,90 +1,93 @@
-set1 = [
-    {
-        question: 'What is a correct syntax to output "Hello World" in Python?',
-        choices: {
-            'a': "echo 'Hello World' ",
-            'b': "ec 'Hello World'",
-            'c': "printf('Hello World')",
-            'd': "print('Hello World')"
+
+set = {
+   'set1' : [
+        {
+            question: 'What is a correct syntax to output "Hello World" in Python?',
+            choices: {
+                'a': "echo 'Hello World' ",
+                'b': "ec 'Hello World'",
+                'c': "printf('Hello World')",
+                'd': "print('Hello World')"
+            },
+            answer: 'd'
         },
-        answer: 'd'
-    },
-    {
-        question: 'What is a correct syntax to the comments in Python?',
-        choices: {
-            'a': "/* This is comment */ ",
-            'b': "// This is comment ",
-            'c': "# This is comment",
-            'd': "&lt!-- This is comment -->"
+        {
+            question: 'What is a correct syntax to the comments in Python?',
+            choices: {
+                'a': "/* This is comment */ ",
+                'b': "// This is comment ",
+                'c': "# This is comment",
+                'd': "&lt!-- This is comment -->"
+            },
+            answer: 'c'
         },
-        answer: 'c'
-    },
-    {
-        question: 'In Python, a variable must be declared before it is assigned a value:',
-        choices: {
-            'a': "True ",
-            'b': "False"
+        {
+            question: 'In Python, a variable must be declared before it is assigned a value:',
+            choices: {
+                'a': "True ",
+                'b': "False"
+            },
+            answer: 'b'
         },
-        answer: 'b'
-    },
-    {
-        question: "Which one is NOT a legal variable name?",
-        choices: {
-            'a': "Myvar",
-            'b': "my-var",
-            'c': "my_var",
-            'd': "_myvar"
+        {
+            question: "Which one is NOT a legal variable name?",
+            choices: {
+                'a': "Myvar",
+                'b': "my-var",
+                'c': "my_var",
+                'd': "_myvar"
+            },
+            answer: 'a'
         },
-        answer: 'a'
-    },
-    {
-        question: "How do you create a variable with the numeric value 5?",
-        choices: {
-            'a': "x = 5",
-            'b': "x = int(5)",
-            'c': "Both the answers are correct"
+        {
+            question: "How do you create a variable with the numeric value 5?",
+            choices: {
+                'a': "x = 5",
+                'b': "x = int(5)",
+                'c': "Both the answers are correct"
+            },
+            answer: 'b'
         },
-        answer: 'b'
-    },
-    {
-        question: "What is the correct file extension for Python files?",
-        choices: {
-            'a': ".pyth",
-            'b': ".pt",
-            'c': ".py",
-            'd': ".pyt"
+        {
+            question: "What is the correct file extension for Python files?",
+            choices: {
+                'a': ".pyth",
+                'b': ".pt",
+                'c': ".py",
+                'd': ".pyt"
+            },
+            answer: 'c'
         },
-        answer: 'c'
-    },
-    {
-        question: "How do you create a variable with the floating number 2.8?",
-        choices: {
-            'a': "x = 2.8",
-            'b': "x = float(2.8)",
-            'c': "both the answers are correct"
+        {
+            question: "How do you create a variable with the floating number 2.8?",
+            choices: {
+                'a': "x = 2.8",
+                'b': "x = float(2.8)",
+                'c': "both the answers are correct"
+            },
+            answer: 'b'
         },
-        answer: 'b'
-    },
-    {
-        question: "What is the correct syntax to output the type of a variable or object in Python?",
-        choices: {
-            'a': "print(type(x))",
-            'b': "print(typeof(x))",
-            'c': "print(typeofx)",
-            'd': "print(typeOfx)"
+        {
+            question: "What is the correct syntax to output the type of a variable or object in Python?",
+            choices: {
+                'a': "print(type(x))",
+                'b': "print(typeof(x))",
+                'c': "print(typeofx)",
+                'd': "print(typeOfx)"
+            },
+            answer: 'a'
         },
-        answer: 'a'
-    },
-    {
-        question: "What is the correct way to create a function in Python?",
-        choices: {
-            'a': "function myfunction(){..}",
-            'b': "def myfunction():",
-            'c': "create myfunction(){..}",
-            'd': "void myfunction(){..}"
-        },
-        answer: 'b'
-    },
+        {
+            question: "What is the correct way to create a function in Python?",
+            choices: {
+                'a': "function myfunction(){..}",
+                'b': "def myfunction():",
+                'c': "create myfunction(){..}",
+                'd': "void myfunction(){..}"
+            },
+            answer: 'b'
+        }],
+    'set2':
     {
         question: "Which method can be used to return a string in upper case letters?",
         choices: {
@@ -94,19 +97,22 @@ set1 = [
             'd': "upperCase()"
         },
         answer: 'a'
-    }]
+    }
+}
+
 
 
 
 
 function checkAnswer(id) {
+    //block.querySelector("input[type='checkbox']:checked").style.css = "Red"
     var buttonBox = document.createElement('div');
     buttonBox.innerHTML += '<div class="collapse" id="answerBox-' + (parseInt(id) + 1) + '">'
         
         + ' </div>';
     document.getElementById(parseInt(id) + 1).appendChild(buttonBox);
     var block = document.getElementById("answers-" + (parseInt(id) + 1));
-    var checked = block.querySelector("input[type='checkbox']:checked").getAttribute("valid");
+    var checked = block.querySelector("input[type='radio']:checked").getAttribute("valid");
     if (checked == null) {
 
         var checkAnswer = document.getElementById('answerBox-' + (parseInt(id) + 1));
@@ -120,6 +126,21 @@ function checkAnswer(id) {
         + ' Correct Answer'
         + '</div>';
     }
+}
+
+
+function Answer()
+{
+    var buttonBox = document.createElement('div');
+    buttonBox.innerHTML += '<div class="collapse" id="answerBox-' + (parseInt(id) + 1) + '">'
+        
+        + ' </div>';
+    document.getElementById(parseInt(id) + 1).appendChild(buttonBox);
+    var block = document.getElementById("answers-" + (parseInt(id) + 1));
+    var checked = block.querySelector("input[type='radio']:checked").getAttribute("valid");
+    var correctAnswer = block.querySelector("input[type='radio']").getAttribute("valid");
+    console.log(checked);
+    console.log(checkAnswer);
 }
 
 
@@ -155,14 +176,17 @@ function addChoices(choices, answer, questionNo) {
         formBox.classList.add("form-check");
         //formBox.classList.add("mt-15");
         formBox.setAttribute("id", option)
+        formBox.innerHTML = "<form>"
         if (option == answer) {
-            formBox.innerHTML = '<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value=' + option + ' valid="valid">';
+            formBox.innerHTML += '<input class="form-check-input" type="radio" name="question-'+parseInt(questionNo)+1+'" id="exampleRadios1" value=' + option + ' valid="valid">';
             formBox.innerHTML += '<label class="form-check-label" for="exampleRadios1">' + choices[option] + '</label>';
+        formBox.innerHTML += "</form>"
             answerBlock.appendChild(formBox);
         }
         else {
-            formBox.innerHTML = '<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value=' + option + '>';
+            formBox.innerHTML = '<input class="form-check-input" type="radio" name="question-'+parseInt(questionNo)+1+'" id="exampleRadios1" value=' + option + '>';
             formBox.innerHTML += '<label class="form-check-label" for="exampleRadios1">' + choices[option] + '</label>';
+        formBox.innerHTML += "</form>"
             answerBlock.appendChild(formBox);
         }
         var thisQuestionBlock = document.getElementById(parseInt(questionNo) + 1);
@@ -184,22 +208,26 @@ function addButtons(questionNo) {
     buttonBox.classList.add("buttonGroup");
     buttonBox.setAttribute("id", "buttonGroup");
     buttonBox.innerHTML = '<button class="btn btn-primary"  type="button" data-toggle="collapse" data-target="#answerBox-' + (parseInt(questionNo) + 1) + '" aria-expanded="false" aria-controls="answer-' + (parseInt(questionNo) + 1) + '" onclick="checkAnswer(' + questionNo + ')">Check Answer</button>';
-    buttonBox.innerHTML += '<button type="button" id="btn" class="btn btn-secondary" onclick="Answer()">Submit</button>';
+    buttonBox.innerHTML += '<button type="button" id="btn-answer" class="btn btn-secondary" onclick="Answer()">Submit</button>';
     buttonBox.innerHTML += '<hr>';
 
     document.getElementById(parseInt(questionNo) + 1).appendChild(buttonBox);
 }
 
 
-function genrateQuiz(set) {
-    for (ques in set) {
-        addQuestions(set[ques].question, ques);
-        addChoices(set[ques].choices, set[ques].answer, ques);
+function genrateQuiz() {
+    var CurrentSet = document.getElementsByClassName("active").item(0).getAttribute("name");
+    thisset = set[CurrentSet];
+    
+    for (ques in thisset) {
+        //console.log(thisset[ques])
+        addQuestions(thisset[ques].question, ques);
+        addChoices(thisset[ques].choices, thisset[ques].answer, ques);
         addButtons(ques);
     }
 }
 
-genrateQuiz(set1);
+genrateQuiz();
 
 
 

@@ -45,13 +45,9 @@ def javaQuiz():
 
 @app.route("/python-quiz")
 def pythonQuiz1():
-    x = "abc"
-    return render_template("pythonquiz.html",x=x)
+    return render_template("pythonquiz.html")
 
-@app.route("/python-quiz-set-2", methods=["POST"])
-def pythonQuiz2():
-    x = "abba"
-    return jsonify({"data":render_template("py2.html",x=x)})
+
 
 @app.route("/python_compiler")
 def python_compiler():
