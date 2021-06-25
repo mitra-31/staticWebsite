@@ -1,139 +1,302 @@
-[[ {
-    "question": "What is a correct syntax to output 'Hello World' in Python?",
-    "choices": {
-        "a": "echo 'Hello World' ",
-        "b": "ec 'Hello World'",
-        "c": "printf('Hello World')",
-        "d": "print('Hello World')"
-    },
-    "answer": "d"
-},
-{
-    "question": "What is a correct syntax to the comments in Python?",
-    "choices": {
-        "a": "/* This is comment */ ",
-        "b": "// This is comment ",
-        "c": "# This is comment",
-        "d": "&lt!-- This is comment -->"
-    },
-    "answer": "c"
-},
-{
-    "question": "In Python, a variable must be declared before it is assigned a value:",
-    "choices": {
-        "a": "True ",
-        "b": "False"
-    },
-    "answer": "b"
-},
-{
-    "question": "Which one is NOT a legal variable name?",
-    "choices": {
-        "a": "Myvar",
-        "b": "my-var",
-        "c": "my_var",
-        "d": "_myvar"
-    },
-    "answer": "a"
-},
-{
-    "question": "How do you create a variable with the numeric value 5?",
-    "choices": {
-        "a": "x = 5",
-        "b": "x = int(5)",
-        "c": "Both the answers are correct"
-    },
-    "answer": "b"
-},
-{
-    "question": "What is the correct file extension for Python files?",
-    "choices": {
-        "a": ".pyth",
-        "b": ".pt",
-        "c": ".py",
-        "d": ".pyt"
-    },
-    "answer": "c"
-},
-{
-    "question": "How do you create a variable with the floating number 2.8?",
-    "choices": {
-        "a": "x = 2.8",
-        "b": "x = float(2.8)",
-        "c": "both the answers are correct"
-    },
-    "answer": "b"
-},
-{
-    "question": "What is the correct syntax to output the type of a variable or object in Python?",
-    "choices": {
-        "a": "print(type(x))",
-        "b": "print(typeof(x))",
-        "c": "print(typeofx)",
-        "d": "print(typeOfx)"
-    },
-    "answer": "a"
-},
-{
-    "question": "What is the correct way to create a function in Python?",
-    "choices": {
-        "a": "function myfunction(){..}",
-        "b": "def myfunction():",
-        "c": "create myfunction(){..}",
-        "d": "void myfunction(){..}"
-    },
-    "answer": "b"
-}],
 [
-    {
-       "question": "Which method can be used to return a string in upper case letters?",
-        "choices": {
-            "a": "toUpperCase()",
-            "b": "upper()",
-            "c": "uppercase()",
-            "d": "upperCase()"
+    [
+        {
+            "question": "What is a correct syntax to output 'Hello World' in Python?",
+            "choices": {
+                "a": "echo 'Hello World' ",
+                "b": "ec 'Hello World'",
+                "c": "printf('Hello World')",
+                "d": "print('Hello World')"
+            },
+            "answer": "d"
         },
-        "answer": "a"
-    },
-    {
-        "question": "Syntax error in python is detected by _________at _______",
-        "choices": {
-            "a": "compiler/ compile time",
-            "b": "interpreter/ run time",
-            "c": "compiler/run time",
-            "d": "interpreter/compile time"
+        {
+            "question": "What is a correct syntax to the comments in Python?",
+            "choices": {
+                "a": "/* This is comment */ ",
+                "b": "// This is comment ",
+                "c": "# This is comment",
+                "d": "&lt!-- This is comment -->"
+            },
+            "answer": "c"
         },
-        "answer": "b"
-    },
-    {
-        "question":"What is output for − 2 * 2 **3",
-        "choices":{
-            "a":"12",
-            "b":"64",
-            "c":"16",
-            "d":"36"
+        {
+            "question": "In Python, a variable must be declared before it is assigned a value:",
+            "choices": {
+                "a": "True ",
+                "b": "False"
+            },
+            "answer": "b"
         },
-        "answer":"c"
-    },
-    {
-        "question":"Which options are correct to create an empty set in Python?",
-        "choices":{
-            "a":"[]",
-            "b":"()",
-            "c":"{}",
-            "d":"set()"
+        {
+            "question": "Which one is NOT a legal variable name?",
+            "choices": {
+                "a": "Myvar",
+                "b": "my-var",
+                "c": "my_var",
+                "d": "_myvar"
+            },
+            "answer": "a"
         },
-        "answer":"d"
-    },
-    {
-        "question":"What will be the output of the following code? <br> minidict = { 'name': 'TutorialsPoint', 'name': 'website'}<br>print(minidict['name'])",
-        "choices":{
-            "a":"TutorialsPoint",
-            "b":"Website",
-            "c":"('TutorialsPoint','Website')",
-            "d":"It will show an Error"
+        {
+            "question": "How do you create a variable with the numeric value 5?",
+            "choices": {
+                "a": "x = 5",
+                "b": "x = int(5)",
+                "c": "Both the answers are correct"
+            },
+            "answer": "b"
         },
-        "answer":"b"
-    }
-]
+        {
+            "question": "What is the correct file extension for Python files?",
+            "choices": {
+                "a": ".pyth",
+                "b": ".pt",
+                "c": ".py",
+                "d": ".pyt"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "How do you create a variable with the floating number 2.8?",
+            "choices": {
+                "a": "x = 2.8",
+                "b": "x = float(2.8)",
+                "c": "both the answers are correct"
+            },
+            "answer": "b"
+        },
+        {
+            "question": "What is the correct syntax to output the type of a variable or object in Python?",
+            "choices": {
+                "a": "print(type(x))",
+                "b": "print(typeof(x))",
+                "c": "print(typeofx)",
+                "d": "print(typeOfx)"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "What is the correct way to create a function in Python?",
+            "choices": {
+                "a": "function myfunction(){..}",
+                "b": "def myfunction():",
+                "c": "create myfunction(){..}",
+                "d": "void myfunction(){..}"
+            },
+            "answer": "b"
+        },
+        {
+            "question": "What is the maximum possible length of an identifier?",
+            "choices": {
+                "a": "31 characters",
+                "b": "63 characters",
+                "c": "79 characters",
+                "d": "None of the mentioned"
+            },
+            "answer": "d"
+        }
+    ],
+    [
+        {
+            "question": "Which method can be used to return a string in upper case letters?",
+            "choices": {
+                "a": "toUpperCase()",
+                "b": "upper()",
+                "c": "uppercase()",
+                "d": "upperCase()"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "Syntax error in python is detected by _________at _______",
+            "choices": {
+                "a": "compiler/ compile time",
+                "b": "interpreter/ run time",
+                "c": "compiler/run time",
+                "d": "interpreter/compile time"
+            },
+            "answer": "b"
+        },
+        {
+            "question": "What is output for − 2 * 2 **3",
+            "choices": {
+                "a": "12",
+                "b": "64",
+                "c": "16",
+                "d": "36"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "Which options are correct to create an empty set in Python?",
+            "choices": {
+                "a": "[]",
+                "b": "()",
+                "c": "{}",
+                "d": "set()"
+            },
+            "answer": "d"
+        },
+        {
+            "question": "What will be the output of the following code? <br> minidict = { 'name': 'TutorialsPoint', 'name': 'website'}<br>print(minidict['name'])",
+            "choices": {
+                "a": "TutorialsPoint",
+                "b": "Website",
+                "c": "('TutorialsPoint','Website')",
+                "d": "It will show an Error"
+            },
+            "answer": "b"
+        },
+        {
+            "question": "What will be the output of the following Python code snippet?['hello', 'morning'][bool('')]",
+            "choices": {
+                "a": "error",
+                "b": "no output",
+                "c": "hello",
+                "d": "morning"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "Which of the following Boolean expressions is not logically equivalent to the other three?",
+            "choices": {
+                "a": "not(-6<0 or-6>10)",
+                "b": "-6>=0 and -6<=10",
+                "c": "not(-6<10 or-6==10)",
+                "d": "not(-6>10 or-6==10)"
+            },
+            "answer": "d"
+        },
+        {
+            "question": "Which of the following will run without errors?",
+            "choices": {
+                "a": "round(45.8)",
+                "b": "round(6352.898,2,5)",
+                "c": "round()",
+                "d": "round(7463.123,2,1)"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "The expression Int(x) implies that the variable x is converted to integer.",
+            "choices": {
+                "a": "False",
+                "b": "True"
+            },
+            "answer": "b"
+        },
+        {
+            "question": "What is the output of print 0.1 + 0.2 == 0.3?",
+            "choices": {
+                "a": "True",
+                "b": "False",
+                "c": "Machine Dependent",
+                "d": "Error"
+            },
+            "answer": "b"
+        }
+    ],
+    [
+        {
+            "question": "Which of the following is not a complex number?",
+            "choices": {
+                "a": "k = 2 + 3j",
+                "b": "k = complex(2, 3)",
+                "c": "k = 2 + 3l",
+                "d": " k = 2 + 3J"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "What does ~~~~5 evaluate to?",
+            "choices": {
+                "a": "+5",
+                "b": "-11",
+                "c": "+11",
+                "d": "-5"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "What does 3 ^ 4 evaluate to?",
+            "choices": {
+                "a": "81",
+                "b": "12",
+                "c": "0.75",
+                "d": "7"
+            },
+            "answer": "d"
+        },
+        {
+            "question": " Which of the following is incorrect?",
+            "choices": {
+                "a": "float('inf')",
+                "b": " float('nan')",
+                "c": "float(56+78)",
+                "d": "float(12+34)"
+            },
+            "answer": "d"
+        },
+        {
+            "question": "What is the result of cmp(3, 1)?",
+            "choices": {
+                "a": "1",
+                "b": "0",
+                "c": "True",
+                "d": "False"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "What is the type of inf?",
+            "choices": {
+                "a": "Boolean",
+                "b": "Integer",
+                "c": "Float",
+                "d": "Complex"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "Given a function that does not return any value. What value is thrown by default when executed in shell?",
+            "choices": {
+                "a": "int",
+                "b": "bool",
+                "c": "void",
+                "d": "None"
+            },
+            "answer": "d"
+        },
+        {
+            "question": "Which of the following operators has its associativity from right to left?",
+            "choices": {
+                "a": "+",
+                "b": "//",
+                "c": "**",
+                "d": "%"
+            },
+            "answer": "c"
+        },
+        {
+            "question": "What is the value of the following expression? 2+4.00, 2**4.0",
+            "choices": {
+                "a": "(6.0, 16.0)",
+                "b": "(6.00, 16.00)",
+                "c": "(6, 16)",
+                "d": "(6.00, 16.0)"
+            },
+            "answer": "a"
+        },
+        {
+            "question": "Which of the following expressions involves coercion when evaluated in Python?",
+            "choices": {
+                "a": "4.7 – 1.5",
+                "b": "7.9 * 6.3",
+                "c": "1.7 % 2",
+                "d": "3.4 + 4.6"
+            },
+            "answer": "c"
+        }
+    ]
 ]
