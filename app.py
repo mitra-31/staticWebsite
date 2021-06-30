@@ -1,6 +1,6 @@
 from flask import Flask,render_template,jsonify
 import jyserver.Flask as jf
-import socket
+
 
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ class Python:
 
 @app.route("/")
 def home():
-    return render_template("home.html",ip=socket.gethostname())
+    return render_template("home.html")
 
 @app.route("/cpp")
 def cpp():
